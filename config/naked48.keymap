@@ -1,0 +1,155 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
+
+#define WIN 0
+#define SYM 1
+#define NAV 2
+#define NUM 3
+#define NUM2 4
+#define MUS 5
+#define STG 6
+
+/ {
+	behaviors {
+		hm: homerow_mods {
+			compatible = "zmk,behavior-hold-tap";
+			label = "HOMEROW_MODS";
+			#binding-cells = <2>;
+			tapping-term-ms = <150>;
+			quick_tap_ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&kp>, <&kp>;
+		};
+	};
+
+	combos {
+		compatible = "zmk,combos";
+		combo_tab {
+			timeout-ms = <50>;
+			key-positions = <1 2>;
+			bindings = <&kp TAB>;
+		};
+		combo_rent {
+			timeout-ms = <50>;
+			key-positions = <19 32>;
+			bindings = <&kp ENTER>;
+		};
+		combo_rbackspace {
+			timeout-ms = <50>;
+			key-positions = <19 20>;
+			bindings = <&kp BACKSPACE>;
+		};
+		combo_lent {
+			timeout-ms = <50>;
+			key-positions = <16 27>;
+			bindings = <&kp ENTER>;
+		};
+		combo_lbackspace {
+			timeout-ms = <50>;
+			key-positions = <15 16>;
+			bindings = <&kp BACKSPACE>;
+		};
+		combo_lspace {
+			timeout-ms = <50>;
+			key-positions = <3 16>;
+			bindings = <&kp SPACE>;
+		};
+		combo_delete {
+			timeout-ms = <50>;
+			key-positions = <16 17>;
+			bindings = <&kp DELETE>;
+		};
+		combo_esc {
+			timeout-ms = <50>;
+			key-positions = <5 17>;
+			bindings = <&kp ESC>;
+		};
+		combo_left {
+			timeout-ms = <50>;
+			key-positions = <25 26>;
+			bindings = <&kp LEFT>;
+		};
+		combo_down {
+			timeout-ms = <50>;
+			key-positions = <26 27>;
+			bindings = <&kp DOWN>;
+		};
+		combo_right {
+			timeout-ms = <50>;
+			key-positions = <27 28>;
+			bindings = <&kp RIGHT>;
+		};
+		combo_UP {
+			timeout-ms = <50>;
+			key-positions = <14 15>;
+			bindings = <&kp UP>;
+		};
+	};
+	
+//	0	1	2	3	4	5		6	7	8	9	10	11
+//	12	13	14	15	16	17		18	19	20	21	22	23
+//	24	25	26	27	28	29		30	31	32	33	34	35
+//		36	37	38	39	40		41	42	43	44	45
+
+	keymap {
+		compatible = "zmk,keymap";
+
+		default_layer {
+			bindings = <
+	&kp LGUI	&kp Q	&kp W	&kp E	&kp R	&kp T		&kp Y	&kp U	&kp I	&kp O	&kp P		&mo STG
+	&kp LALT	&kp A	&kp S	&kp D	&kp F	&kp G		&kp H	&kp J	&kp K	&kp L	&lt NUM SEMI	&kp SQT
+	&kp LCTRL	&kp Z	&kp X	&kp C	&kp V	&kp B		&kp N	&kp M	&kp COMMA	&kp DOT	&kp FSLH		&mo MUS
+		&none	&none	&mo NUM2	&mo SYM	&sk LSHIFT	&kp SPACE	&mo NAV	&kp ESC	&none	&none
+			>;
+		};
+		sym_layer {
+			bindings = <
+	&trans	&kp EXCL	&kp AT	&kp HASH	&kp DLLR	&kp PRCNT		&kp CARET	&kp AMPS	&kp ASTRK	&kp UNDER	&kp EQUAL	&trans
+	&trans	&kp GRAVE	&kp TILDE	&kp LPAR	&kp RPAR	&kp BSLH		&kp PIPE2	&kp LBKT	&kp RBKT	&kp MINUS	&kp PLUS	&trans
+	&trans	&trans	&trans	&kp LT	&kp GT	&trans		&trans	&kp LBRC	&kp RBRC	&trans	&trans	&trans
+		&none	&none	&trans	&trans	&trans		&trans	&trans	&trans	&none	&none	
+			>;
+		};
+		nav_layer {
+			bindings = <
+	&trans	&trans	&trans	&trans	&trans	&trans		&kp PG_UP	&kp HOME		&kp UP	&kp END		&trans	&trans
+	&trans	&trans	&trans	&trans	&trans	&trans		&kp PG_DN	&kp LEFT		&kp DOWN	&kp RIGHT		&trans	&trans
+	&trans	&trans	&trans	&kp LT	&kp GT	&trans		&trans	&kp LC(LEFT)	&kp RBRC	&kp LC(RIGHT)	&trans	&trans
+		&none	&none	&trans	&trans	&trans		&trans	&trans		&trans	&none		&none	
+			>;
+		};
+		num_layer {
+			bindings = <
+	&trans	&kp F1	&kp F2	&kp F3	&kp F4	&trans		&kp FSLH	&kp N7	&kp N8	&kp N9	&trans	&trans
+	&trans	&kp F5	&kp F6	&kp F7	&kp F8	&trans		&kp ASTRK	&kp N4	&kp N5	&kp N6	&trans	&trans
+	&trans	&kp F9	&kp F10	&kp F11	&kp F12	&trans		&kp MINUS	&kp N1	&kp N2	&kp N3	&trans	&trans
+		&none	&none	&trans	&trans	&trans		&kp PLUS	&kp N0	&kp DOT	&none	&none	
+			>;
+		};
+		num2_layer {
+			bindings = <
+	&kp ESC	&kp N1	&kp N2	&kp N3	&kp N0	&trans		&trans	&trans	&trans	&trans	&trans	&trans
+	&trans	&kp N4	&kp N5	&kp N6	&trans	&trans		&trans	&trans	&trans	&trans	&trans	&trans
+	&trans	&kp N7	&kp N8	&kp N9	&trans	&trans		&trans	&trans	&trans	&trans	&trans	&trans
+		&none	&none	&trans	&trans	&trans		&trans	&trans	&trans	&none	&none	
+			>;
+		};
+		mus_layer {
+			bindings = <
+	&trans	&trans	&trans	&trans	&trans	&trans		&trans	&trans	&trans	&trans	&trans	&trans
+	&trans	&trans	&trans	&trans	&trans	&trans		&trans	&kp	C_PP	&kp	C_PREV	&kp	C_NEXT	&trans	&trans
+	&trans	&trans	&trans	&trans	&trans	&trans		&trans	&kp	K_MUTE	&kp	C_VOL_DN	&kp	C_VOL_UP	&trans	&trans
+		&none	&none	&trans	&trans	&trans		&trans	&trans	&trans	&none	&none	
+			>;
+		};
+		stg_layer {
+			bindings = <
+	&trans		&trans		&trans		&trans		&trans		&trans		&trans	&trans	&trans	&trans	&trans	&trans
+	&bt BT_CLR	&bt BT_SEL 0	&bt BT_SEL 1	&bt BT_SEL 2	&bt BT_SEL 3	&bt BT_SEL 4	&trans	&trans	&trans	&trans	&trans	&trans
+	&reset		&trans		&trans		&trans		&trans		&trans		&trans	&trans	&trans	&trans	&trans	&trans
+			&none		&none		&trans		&trans		&trans		&trans	&trans	&trans	&none	&none	
+			>;
+		};
+	};
+};
