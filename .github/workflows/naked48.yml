@@ -1,6 +1,6 @@
 on: [push, pull_request, workflow_dispatch]
 
-name: naked48
+name: Build
 
 jobs:
   build:
@@ -46,4 +46,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: naked48_nice_nano.uf2
+          path: naked48_nice_nano_v2.uf2
