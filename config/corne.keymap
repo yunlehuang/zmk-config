@@ -98,10 +98,10 @@
 
                 default_layer {
                         bindings = <
-        &kp LALT       &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P           &mo STG
-        &kp LCTRL      &kp A           &kp S           &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           &kp L           &lt NUM SEMI    &kp SQT
+        &kp LCTRL      &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P           &mo STG
+        &kp LALT       &kp A           &kp S           &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           &kp L           &lt NUM SEMI    &kp SQT
         &kp LGUI       &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &mo MUS
-                                                       &mo NUM2        &mo SYM         &sk LSHIFT      &kp SPACE       &mo NAV         &kp ESC
+                                                       &mo NUM2        &mo SYM         &LSHIFT      &kp SPACE       &mo NAV         &kp ESC
                         >;
                 };
 	      mac_layer {
@@ -109,14 +109,14 @@
         &kp LALT       &kp Q           &kp W            &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P           &mo STG
         &kp LCTRL      &kp A           &kp S            &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           &kp L           &lt NUM SEMI    &kp SQT
         &kp LGUI       &kp Z           &kp X            &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &mo MUS
-                                                        &mo NUM2        &mo SYM         &sk LSHIFT      &kp SPACE       &mo NAV         &kp ESC
+                                                        &mo NUM2        &mo SYM         &LSHIFT      &kp SPACE       &mo NAV         &kp ESC
                         >;
                 };
                 sym_layer {
                         bindings = <
         &trans          &kp EXCL        &kp AT_SIGN     &kp HASH        &kp DLLR        &kp PRCNT       &kp CARET       &kp AMPS        &kp ASTRK       &kp UNDER       &kp EQUAL       &trans
         &trans          &kp GRAVE       &kp TILDE       &kp LPAR        &kp RPAR        &kp BSLH        &kp PIPE2       &kp LBKT        &kp RBKT        &kp MINUS       &kp PLUS        &trans
-        &trans          &trans          &trans          &kp LT          &kp GT          &trans          &trans          &kp LBRC        &kp RBRC        &trans          &trans          &trans
+        &trans          &kp LC(LEFT)    &kp LC(RIGHT)   &kp LT          &kp GT          &trans          &trans          &kp LBRC        &kp RBRC        &trans          &trans          &trans
                                                         &trans          &trans          &trans          &trans          &trans          &trans
                         >;
                 };
