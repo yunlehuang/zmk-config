@@ -185,17 +185,17 @@
 
                 default_layer {
                         bindings = <
-        &kp LCTRL      &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P           &mo STG
-        &kp LALT       &kp A           &kp S           &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           &kp L           &lt NUM SEMI    &kp SQT
-        &kp LGUI       &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &mo MUS
+        &kp LGUI        &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P           &mo STG
+        &kp LALT        &kp A           &kp S           &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           &kp L           &lt NUM SEMI    &kp SQT
+        &kp LCTRL       &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &mo MUS
                                                        &mo NUM2        &mo SYM         &kp LSHIFT      &kp SPACE       &mo NAV         &kp ESC
                         >;
                 };
 	      mac_layer {
                        bindings = <
-        &kp LALT       &kp Q           &kp W            &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P           &mo STG
-        &kp LCTRL      &kp A           &kp S            &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           &kp L           &lt NUM SEMI    &kp SQT
-        &kp LGUI       &kp Z           &kp X            &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &mo MUS
+        &kp LCTRL       &kp Q           &kp W            &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P           &mo STG
+        &kp LALT        &kp A           &kp S            &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           &kp L           &lt NUM SEMI    &kp SQT
+        &kp LGUI        &kp Z           &kp X            &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH        &mo MUS
                                                         &mo NUM2        &mo SYM         &kp LSHIFT      &kp SPACE       &mo NAV         &kp ESC
                         >;
                 };
