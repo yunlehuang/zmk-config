@@ -111,7 +111,7 @@
                             <&macro_press &kp LALT>,
                             <&macro_press &kp LSHFT>,
                             <&macro_tap &kp N0>,
-                            <&macro_release &kp LALT>
+                            <&macro_release &kp LALT>,
                             <&macro_release &kp LSHFT>
                             ;
                 };
