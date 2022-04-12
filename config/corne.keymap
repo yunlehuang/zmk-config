@@ -29,58 +29,58 @@
                 label = "macro_combo_comment";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = 
-                    <&macro_press &kp LCTRL>,
-                    <&macro_tap &kp K $kp C>,
-                    <&macro_release &kp LCTRL>
+                bindings 
+                    = <&macro_press &kp LCTRL>
+                    , <&macro_tap &kp K $kp C>
+                    , <&macro_release &kp LCTRL>
                     ;
             };
             macro_combo_uncomment: macro_combo_uncomment {
                 label = "macro_combo_uncomment";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = 
-                    <&macro_press &kp LCTRL>,
-                    <&macro_tap &kp K $kp U>,
-                    <&macro_release &kp LCTRL>
+                bindings
+                    = <&macro_press &kp LCTRL>
+                    , <&macro_tap &kp K $kp U>
+                    , <&macro_release &kp LCTRL>
                     ;
             };
             macro_combo_vsc_flip: macro_combo_vsc_flip {
                 label = "macro_combo_vsc_flip";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = 
-                    <&macro_press &kp LALT>,
-                    <&macro_press &kp LSHFT>,
-                    <&macro_tap &kp N0>,
-                    <&macro_release &kp LALT>,
-                    <&macro_release &kp LSHFT>
+                bindings
+                    = <&macro_press &kp LALT>
+                    , <&macro_press &kp LSHFT>
+                    , <&macro_tap &kp N0>
+                    , <&macro_release &kp LALT>
+                    , <&macro_release &kp LSHFT>
                     ;
             };
             macro_combo_excel_copy_val: macro_combo_excel_copy_val {
                 label = "macro_combo_excel_copy_val";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = 
-                    <&macro_tap &kp F2>,
-                    <&macro_press &kp LCTRL>,
-                    <&macro_tap &kp A &kp C>,
-                    <&macro_release &kp LCTRL>,
-                    <&macro_tap &kp ESC>
+                bindings
+                    = <&macro_tap &kp F2>
+                    , <&macro_press &kp LCTRL>
+                    , <&macro_tap &kp A &kp C>
+                    , <&macro_release &kp LCTRL>
+                    , <&macro_tap &kp ESC>
                     ;
             };
             macro_combo_mac_scr_shot: macro_combo_mac_scr_shot {
                 label = "macro_combo_mac_scr_shot";
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                bindings = 
-                    <&macro_press &kp LCTRL>,
-                    <&macro_press &kp LSHFT>,
-                    <&macro_press &kp LGUI>,
-                    <&macro_tap &kp N4>,
-                    <&macro_release &kp LCTRL>,
-                    <&macro_release &kp LSHFT>,
-                    <&macro_release &kp LGUI>
+                bindings
+                    = <&macro_press &kp LCTRL>
+                    , <&macro_press &kp LSHFT>
+                    , <&macro_press &kp LGUI>
+                    , <&macro_tap &kp N4>
+                    , <&macro_release &kp LCTRL>
+                    , <&macro_release &kp LSHFT>
+                    , <&macro_release &kp LGUI>
                     ;
             };
         };
