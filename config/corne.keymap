@@ -151,28 +151,29 @@
             combo_comment {
                     timeout-ms = <50>;
                     key-positions = <25 27>;
-                    bindings = <&macro_combo_comment>;
+                    bindings = <&kp UP>;
+//                    bindings = <&macro_combo_comment>;
             };
-            combo_uncomment {
-                    timeout-ms = <50>;
-                    key-positions = <25 28>;
-                    bindings = <&macro_combo_uncomment>;
-            };
-            combo_vsc_flip {
-                    timeout-ms = <50>;
-                    key-positions = <6 30>;
-                    bindings = <&macro_combo_vsc_flip>;
-            };
-            combo_excel_copy_val {
-                    timeout-ms = <50>;
-                    key-positions = <1 27>;
-                    bindings = <&macro_combo_excel_copy_val>;
-            };
-            combo_mac_scr_shot {
-                    timeout-ms = <50>;
-                    key-positions = <14 26>;
-                    bindings = <&macro_combo_mac_scr_shot>;
-            };
+//            combo_uncomment {
+//                    timeout-ms = <50>;
+//                    key-positions = <25 28>;
+//                    bindings = <&macro_combo_uncomment>;
+//            };
+//            combo_vsc_flip {
+//                    timeout-ms = <50>;
+//                    key-positions = <6 30>;
+//                    bindings = <&macro_combo_vsc_flip>;
+//            };
+//            combo_excel_copy_val {
+//                    timeout-ms = <50>;
+//                    key-positions = <1 27>;
+//                    bindings = <&macro_combo_excel_copy_val>;
+//            };
+//            combo_mac_scr_shot {
+//                    timeout-ms = <50>;
+//                    key-positions = <14 26>;
+//                    bindings = <&macro_combo_mac_scr_shot>;
+//            };
         };
         
         keymap {
