@@ -13,132 +13,166 @@
 
 / {
         behaviors {
-                hm: homerow_mods {
-                        compatible = "zmk,behavior-hold-tap";
-                        label = "HOMEROW_MODS";
-                        #binding-cells = <2>;
-                        tapping-term-ms = <150>;
-                        quick_tap_ms = <0>;
-                        flavor = "balanced";
-                        bindings = <&kp>, <&kp>;
-                };
+            hm: homerow_mods {
+                    compatible = "zmk,behavior-hold-tap";
+                    label = "HOMEROW_MODS";
+                    #binding-cells = <2>;
+                    tapping-term-ms = <150>;
+                    quick_tap_ms = <0>;
+                    flavor = "balanced";
+                    bindings = <&kp>, <&kp>;
+            };
         };
 
+        macros {
+            macro_combo_comment: macro_combo_comment {
+                label = "macro_combo_comment";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = 
+                    <&macro_press &kp LCTRL>,
+                    <&macro_tap &kp K $kp C>,
+                    <&macro_release &kp LCTRL>
+                    ;
+            };
+            macro_combo_uncomment: macro_combo_uncomment {
+                label = "macro_combo_uncomment";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = 
+                    <&macro_press &kp LCTRL>,
+                    <&macro_tap &kp K $kp U>,
+                    <&macro_release &kp LCTRL>
+                    ;
+            };
+            macro_combo_vsc_flip: macro_combo_vsc_flip {
+                label = "macro_combo_vsc_flip";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = 
+                    <&macro_press &kp LALT>,
+                    <&macro_press &kp LSHFT>,
+                    <&macro_tap &kp N0>,
+                    <&macro_release &kp LALT>,
+                    <&macro_release &kp LSHFT>
+                    ;
+            };
+            macro_combo_excel_copy_val: macro_combo_excel_copy_val {
+                label = "macro_combo_excel_copy_val";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = 
+                    <&macro_tap &kp F2>,
+                    <&macro_press &kp LCTRL>,
+                    <&macro_tap &kp A &kp C>,
+                    <&macro_release &kp LCTRL>,
+                    <&macro_tap &kp ESC>
+                    ;
+            };
+            macro_combo_mac_scr_shot: macro_combo_mac_scr_shot {
+                label = "macro_combo_mac_scr_shot";
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = 
+                    <&macro_press &kp LCTRL>,
+                    <&macro_press &kp LSHFT>,
+                    <&macro_press &kp LGUI>,
+                    <&macro_tap &kp N4>,
+                    <&macro_release &kp LCTRL>,
+                    <&macro_release &kp LSHFT>,
+                    <&macro_release &kp LGUI>
+                    ;
+            };
+        };
+
+
         combos {
-                compatible = "zmk,combos";
-                combo_tab {
-                        timeout-ms = <50>;
-                        key-positions = <1 2>;
-                        bindings = <&kp TAB>;
-                };
-                combo_rent {
-                        timeout-ms = <50>;
-                        key-positions = <19 32>;
-                        bindings = <&kp ENTER>;
-                };
-                combo_rbackspace {
-                        timeout-ms = <50>;
-                        key-positions = <19 20>;
-                        bindings = <&kp BACKSPACE>;
-                };
-                combo_lent {
-                        timeout-ms = <50>;
-                        key-positions = <16 27>;
-                        bindings = <&kp ENTER>;
-                };
-                combo_lbackspace {
-                        timeout-ms = <50>;
-                        key-positions = <15 16>;
-                        bindings = <&kp BACKSPACE>;
-                };
-                combo_lspace {
-                        timeout-ms = <50>;
-                        key-positions = <3 16>;
-                        bindings = <&kp SPACE>;
-                };
-                combo_delete {
-                        timeout-ms = <50>;
-                        key-positions = <16 17>;
-                        bindings = <&kp DELETE>;
-                };
-                combo_esc {
-                        timeout-ms = <50>;
-                        key-positions = <5 17>;
-                        bindings = <&kp ESC>;
-                };
-                combo_left {
-                        timeout-ms = <50>;
-                        key-positions = <25 26>;
-                        bindings = <&kp LEFT>;
-                };
-                combo_down {
-                        timeout-ms = <50>;
-                        key-positions = <26 27>;
-                        bindings = <&kp DOWN>;
-                };
-                combo_right {
-                        timeout-ms = <50>;
-                        key-positions = <27 28>;
-                        bindings = <&kp RIGHT>;
-                };
-                combo_up {
-                        timeout-ms = <50>;
-                        key-positions = <14 15>;
-                        bindings = <&kp UP>;
-                };
-                combo_comment {
-                        timeout-ms = <50>;
-                        key-positions = <25 27>;
-                        bindings = 
-                            <&macro_press &kp LCTRL>,
-                            <&macro_tap &kp K $kp C>,
-                            <&macro_release &kp LCTRL>
-                            ;
-                };
-                combo_uncomment {
-                        timeout-ms = <50>;
-                        key-positions = <25 28>;
-                        bindings = 
-                            <&macro_press &kp LCTRL>,
-                            <&macro_tap &kp K $kp U>,
-                            <&macro_release &kp LCTRL>
-                            ;
-                };
-                combo_vsc_flip {
-                        timeout-ms = <50>;
-                        key-positions = <6 30>;
-                        bindings = 
-                            <&macro_press &kp LALT>,
-                            <&macro_press &kp LSHFT>,
-                            <&macro_tap &kp N0>,
-                            <&macro_release &kp LALT>,
-                            <&macro_release &kp LSHFT>
-                            ;
-                };
-                combo_excel_copy_val {
-                        timeout-ms = <50>;
-                        key-positions = <1 27>;
-                        bindings = 
-                            <&macro_tap &kp F2>,
-                            <&macro_press &kp LCTRL>,
-                            <&macro_tap &kp A &kp C>,
-                            <&macro_release &kp LCTRL>,
-                            <&macro_tap &kp ESC>
-                            ;
-                };
-                combo_mac_scr_shot {
-                        timeout-ms = <50>;
-                        key-positions = <14 26>;
-                        bindings = 
-                            <&macro_press &kp LCTRL>,
-                            <&macro_press &kp LSHFT>,
-                            <&macro_press &kp LGUI>,
-                            <&macro_tap &kp N4>,
-                            <&macro_release &kp LCTRL>,
-                            <&macro_release &kp LSHFT>,
-                            <&macro_release &kp LGUI>
-                            ;
-                };
+            compatible = "zmk,combos";
+            combo_tab {
+                    timeout-ms = <50>;
+                    key-positions = <1 2>;
+                    bindings = <&kp TAB>;
+            };
+            combo_rent {
+                    timeout-ms = <50>;
+                    key-positions = <19 32>;
+                    bindings = <&kp ENTER>;
+            };
+            combo_rbackspace {
+                    timeout-ms = <50>;
+                    key-positions = <19 20>;
+                    bindings = <&kp BACKSPACE>;
+            };
+            combo_lent {
+                    timeout-ms = <50>;
+                    key-positions = <16 27>;
+                    bindings = <&kp ENTER>;
+            };
+            combo_lbackspace {
+                    timeout-ms = <50>;
+                    key-positions = <15 16>;
+                    bindings = <&kp BACKSPACE>;
+            };
+            combo_lspace {
+                    timeout-ms = <50>;
+                    key-positions = <3 16>;
+                    bindings = <&kp SPACE>;
+            };
+            combo_delete {
+                    timeout-ms = <50>;
+                    key-positions = <16 17>;
+                    bindings = <&kp DELETE>;
+            };
+            combo_esc {
+                    timeout-ms = <50>;
+                    key-positions = <5 17>;
+                    bindings = <&kp ESC>;
+            };
+            combo_left {
+                    timeout-ms = <50>;
+                    key-positions = <25 26>;
+                    bindings = <&kp LEFT>;
+            };
+            combo_down {
+                    timeout-ms = <50>;
+                    key-positions = <26 27>;
+                    bindings = <&kp DOWN>;
+            };
+            combo_right {
+                    timeout-ms = <50>;
+                    key-positions = <27 28>;
+                    bindings = <&kp RIGHT>;
+            };
+            combo_up {
+                    timeout-ms = <50>;
+                    key-positions = <14 15>;
+                    bindings = <&kp UP>;
+            };
+            combo_comment {
+                    timeout-ms = <50>;
+                    key-positions = <25 27>;
+                    bindings = <&macro_combo_comment>;
+            };
+            combo_uncomment {
+                    timeout-ms = <50>;
+                    key-positions = <25 28>;
+                    bindings = <&macro_combo_uncomment>;
+            };
+            combo_vsc_flip {
+                    timeout-ms = <50>;
+                    key-positions = <6 30>;
+                    bindings = <&macro_combo_vsc_flip>;
+            };
+            combo_excel_copy_val {
+                    timeout-ms = <50>;
+                    key-positions = <1 27>;
+                    bindings = <&macro_combo_excel_copy_val>;
+            };
+            combo_mac_scr_shot {
+                    timeout-ms = <50>;
+                    key-positions = <14 26>;
+                    bindings = <&macro_combo_mac_scr_shot>;
+            };
         };
         
         keymap {
