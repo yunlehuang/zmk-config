@@ -86,59 +86,59 @@
                         key-positions = <14 15>;
                         bindings = <&kp UP>;
                 };
-                combo_comment {
-                        timeout-ms = <50>;
-                        key-positions = <25 27>;
-                        bindings = 
-                            <&macro_press &kp LCTRL>,
-                            <&macro_tap &kp K $kp C>,
-                            <&macro_release &kp LCTRL>
-                            ;
-                };
-                combo_uncomment {
-                        timeout-ms = <50>;
-                        key-positions = <25 28>;
-                        bindings = 
-                            <&macro_press &kp LCTRL>,
-                            <&macro_tap &kp K $kp U>,
-                            <&macro_release &kp LCTRL>
-                            ;
-                };
-                combo_vsc_flip {
-                        timeout-ms = <50>;
-                        key-positions = <6 30>;
-                        bindings = 
-                            <&macro_press &kp LALT>,
-                            <&macro_press &kp LSHFT>,
-                            <&macro_tap &kp N0>,
-                            <&macro_release &kp LALT>,
-                            <&macro_release &kp LSHFT>
-                            ;
-                };
-                combo_excel_copy_val {
-                        timeout-ms = <50>;
-                        key-positions = <1 27>;
-                        bindings = 
-                            <&macro_tap &kp F2>,
-                            <&macro_press &kp LCTRL>,
-                            <&macro_tap &kp A &kp C>,
-                            <&macro_release &kp LCTRL>,
-                            <&macro_tap &kp ESC>
-                            ;
-                };
-                combo_mac_scr_shot {
-                        timeout-ms = <50>;
-                        key-positions = <14 26>;
-                        bindings = 
-                            <&macro_press &kp LCTRL>,
-                            <&macro_press &kp LSHFT>,
-                            <&macro_press &kp LGUI>,
-                            <&macro_tap &kp N4>,
-                            <&macro_release &kp LCTRL>,
-                            <&macro_release &kp LSHFT>,
-                            <&macro_release &kp LGUI>
-                            ;
-                };
+//                combo_comment {
+//                        timeout-ms = <50>;
+//                        key-positions = <25 27>;
+//                        bindings = 
+//                            <&macro_press &kp LCTRL>,
+//                            <&macro_tap &kp K $kp C>,
+//                            <&macro_release &kp LCTRL>
+//                            ;
+//                };
+//                combo_uncomment {
+//                        timeout-ms = <50>;
+//                        key-positions = <25 28>;
+//                        bindings = 
+//                            <&macro_press &kp LCTRL>,
+//                            <&macro_tap &kp K $kp U>,
+//                            <&macro_release &kp LCTRL>
+//                            ;
+//                };
+//                combo_vsc_flip {
+//                        timeout-ms = <50>;
+//                        key-positions = <6 30>;
+//                        bindings = 
+//                            <&macro_press &kp LALT>,
+//                            <&macro_press &kp LSHFT>,
+//                            <&macro_tap &kp N0>,
+//                            <&macro_release &kp LALT>,
+//                            <&macro_release &kp LSHFT>
+//                            ;
+//                };
+//                combo_excel_copy_val {
+//                        timeout-ms = <50>;
+//                        key-positions = <1 27>;
+//                        bindings = 
+//                            <&macro_tap &kp F2>,
+//                            <&macro_press &kp LCTRL>,
+//                            <&macro_tap &kp A &kp C>,
+//                            <&macro_release &kp LCTRL>,
+//                            <&macro_tap &kp ESC>
+//                            ;
+//                };
+//                combo_mac_scr_shot {
+//                        timeout-ms = <50>;
+//                        key-positions = <14 26>;
+//                        bindings = 
+//                            <&macro_press &kp LCTRL>,
+//                            <&macro_press &kp LSHFT>,
+//                            <&macro_press &kp LGUI>,
+//                            <&macro_tap &kp N4>,
+//                            <&macro_release &kp LCTRL>,
+//                            <&macro_release &kp LSHFT>,
+//                            <&macro_release &kp LGUI>
+//                            ;
+//                };
         };
         
         keymap {
