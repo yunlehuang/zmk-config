@@ -6,10 +6,11 @@
 #define MAC 1
 #define SYM 2
 #define NAV 3
-#define NUM 4
-#define NUM2 5
-#define MUS 6
-#define STG 7
+#define NAV2 4
+#define NUM 5
+#define NUM2 6
+#define MUS 7
+#define STG 8
 
 / {
         behaviors {
@@ -191,7 +192,7 @@
                                                        &mo NUM2        &mo SYM         &kp LSHIFT      &kp SPACE       &mo NAV         &kp ESC
                         >;
                 };
-	      mac_layer {
+	            mac_layer {
                        bindings = <
         &kp LCTRL       &kp Q           &kp W            &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P           &mo STG
         &kp LALT        &kp A           &kp S            &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           &kp L           &lt NUM SEMI    &kp SQT
@@ -208,6 +209,14 @@
                         >;
                 };
                 nav_layer {
+                        bindings = <
+        &trans          &trans          &kp HOME        &trans          &kp END         &trans          &kp PG_UP       &kp LG(LEFT)    &kp UP          &kp LG(RIGHT) &trans          &trans
+        &trans          &trans          &trans          &trans          &trans          &trans          &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT     &trans          &trans
+        &trans          &trans          &trans          &trans          &trans          &trans          &trans          &kp LC(LEFT)    &kp RBRC        &kp LC(RIGHT) &trans          &trans
+                                                        &trans          &trans          &trans          &trans          &trans          &trans
+                        >;
+                };
+                nav2_layer {
                         bindings = <
         &trans          &trans          &kp HOME        &trans          &kp END         &trans          &kp PG_UP       &kp LG(LEFT)    &kp UP          &kp LG(RIGHT) &trans          &trans
         &trans          &trans          &trans          &trans          &trans          &trans          &kp PG_DN       &kp LEFT        &kp DOWN        &kp RIGHT     &trans          &trans
